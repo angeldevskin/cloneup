@@ -1,0 +1,31 @@
+---
+kind: pipeline
+type: docker
+name: build
+trigger:
+  branch:
+    - develop
+
+steps:
+  - name: build
+    privileged: true
+    image: node:17.0.0
+    environment:
+      NODE_ENV: development
+      VITE_NODE_ENV: development
+      VITE_API_URL:
+        from_secret: VITE_API_URL
+    volumes:
+      - name: cache
+        path: /tmp/cache
+    commands:
+      - npm i -f
+      - npm run build
+      - mkdir -p /tmp/cache/upfunnels-panel-front
+      - cp -r ./dist/* /tmp/cache/upfunnels-panel-front
+      - chmod -R 777 /tmp/cache/upfunnels-panel-front
+
+volumes:
+  - name: cache
+    host:
+      path: /home/sa/nginxui/var/www

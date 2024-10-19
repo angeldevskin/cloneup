@@ -1,0 +1,339 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Maven Pro', sans-serif;
+}
+
+button {
+	cursor: pointer;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.headingWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: #083344;
+	width: 100%;
+
+	padding: 5rem 0;
+}
+
+.heading {
+	background: #144659;
+	color: #ffffff;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: 1rem;
+
+	margin: 1rem 0;
+
+	padding: 2rem;
+
+	width: 100%;
+	max-width: 1000px;
+
+	h1 {
+		font-size: 4rem;
+	}
+
+	div {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		gap: 1rem;
+	}
+}
+
+.pricing {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem 2rem;
+
+	border: 1px solid #29f48f;
+	color: #ffffff;
+	background: transparent;
+}
+
+.solutions {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem 2rem;
+
+	border: 1px solid #29f48f;
+	color: #144659;
+	background: #29f48f;
+}
+
+.services {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+
+	padding: 7rem 20rem;
+
+	h1 {
+		margin-bottom: 2rem;
+	}
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 2rem;
+	width: 100%;
+}
+
+.bgContainer {
+	background-image: url('https://geofund.com.br/wp-content/uploads/2023/09/placeholder-10.png');
+	width: 100%;
+	height: 15rem;
+	object-fit: cover;
+}
+
+.plansWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 4rem;
+	background: #144659;
+	color: #ffffff;
+	width: 100%;
+
+	padding: 2rem 10rem;
+}
+
+.plansDetails {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: 2rem;
+
+	margin-top: -6rem;
+}
+
+.plan {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+
+	background: #083344;
+
+	padding: 2rem 5rem;
+
+	button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 1rem 2rem;
+
+		width: 100%;
+
+		border: none;
+		color: #144659;
+		background: #29f48f;
+	}
+}
+
+.planPrice {
+	color: #29f48f;
+	font-weight: 300;
+	font-size: 4rem;
+}
+
+.plangains {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: 1rem;
+}
+
+.goals {
+	background: #193447;
+	width: 100%;
+
+	color: #ffffff;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 2rem;
+
+	padding: 5rem 25rem;
+}
+
+.goal {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+
+	background: #ffffff;
+	border: 1px solid #144659;
+	color: #144659;
+
+	margin-top: -7rem;
+
+	padding: 2rem 1rem;
+
+	button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 1rem 2rem;
+
+		width: 100%;
+
+		border: none;
+		color: #ffffff;
+		background: #144659;
+	}
+}
+
+.contact {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	background: #144659;
+	color: #ffffff;
+
+	height: 100%;
+
+	width: 100%;
+}
+
+.description {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 1rem;
+
+	padding: 2rem;
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	.info {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		gap: 1rem;
+	}
+}
+
+.formWrapper {
+	background: #193447;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: 1rem;
+
+	margin-top: -3rem;
+
+	padding: 2rem;
+
+	span {
+		width: 100%;
+	}
+
+	input {
+		width: 100%;
+		padding: 1rem;
+		border: none;
+		outline: none;
+		background: #ffffff;
+		color: #144659;
+
+		margin-top: 0.5rem;
+	}
+
+	p:first-of-type {
+		color: #29f48f;
+		font-size: 1.5rem;
+	}
+
+	button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 1rem 2rem;
+
+		width: 100%;
+
+		border: none;
+		color: #144659;
+		background: #29f48f;
+	}
+}
+
+@media (max-width: 1000px) {
+	.headingWrapper {
+		padding: 2rem 0;
+	}
+
+	.heading {
+		padding: 1rem;
+	}
+
+	.services {
+		padding: 2rem 1rem;
+
+		.wrapper {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.plansWrapper {
+		padding: 2rem 1rem;
+		flex-direction: column;
+
+		.plansDetails {
+			flex-direction: column;
+			margin-top: 0;
+		}
+	}
+
+	.goals {
+		padding: 2rem 1rem;
+		grid-template-columns: 1fr;
+
+		.goal {
+			margin-top: 0;
+		}
+	}
+
+	.contact {
+		padding: 2rem 1rem;
+
+		flex-direction: column;
+
+		.formWrapper {
+			margin-top: 0;
+		}
+	}
+}

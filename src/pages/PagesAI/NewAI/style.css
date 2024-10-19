@@ -1,0 +1,13 @@
+input.decrement-button::-webkit-outer-spin-button,
+input.decrement-button::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number].decrement-button {
+    -moz-appearance: textfield;
+}
+
+.field.startMessage > div > div > textarea {
+    height: 15vh !important;
+}

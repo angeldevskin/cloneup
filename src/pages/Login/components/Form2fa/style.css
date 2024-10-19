@@ -1,0 +1,41 @@
+.block-mfa h2.title-mfa {
+	font-size: 42px;
+	font-weight: 400;
+	color: #141522;
+	margin-bottom: 18px;
+}
+
+.block-mfa p {
+	color: #141522;
+	font-size: 14px;
+	line-height: 2;
+	margin-bottom: 20px;
+}
+
+.block-mfa .flex-block {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.block-mfa input[type='text'] {
+	width: 50px !important;
+	height: 50px !important;
+	margin: 0 9px;
+	border: 1px solid #d7d5dd;
+	border-radius: 10px;
+	font-size: 22px;
+	text-align: center;
+}
+
+.block-mfa input[type='text']:focus,
+.block-mfa input[type='text']:focus-visible {
+	border: 1px solid #009ef7 !important;
+	outline: none !important;
+}
+
+.block-mfa button[type='submit'] {
+	margin-top: 30px;
+	height: 48px;
+	font-weight: 600;
+}

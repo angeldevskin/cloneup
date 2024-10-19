@@ -1,0 +1,232 @@
+#code-page {
+	width: 100%;
+}
+
+.dialog-modal-code {
+	overflow-x: hidden !important;
+	overflow-y: auto !important;
+}
+
+#code-page .header {
+	align-items: center;
+	display: flex;
+	justify-content: flex-end;
+}
+
+#code-page table tbody tr td:first-of-type {
+	width: 30px;
+}
+
+#modal-new-code > p {
+	padding: 0;
+	padding-top: 12px;
+}
+
+#modal-new-code button {
+	padding: 0.5rem 1.3rem;
+}
+
+#modal-new-code p,
+#modal-new-code span {
+	font-size: 14px;
+	color: #444f55;
+}
+
+#modal-new-code .integration_title {
+	margin-bottom: 16px;
+}
+
+#modal-new-code .integration {
+	padding-top: 32px;
+}
+
+#modal-new-code .integration_title span {
+	font-weight: 600;
+}
+
+#modal-new-code span.sub {
+	padding-left: 14px;
+	margin-left: 10px;
+	color: #85959e !important;
+	position: relative;
+	font-weight: 400;
+}
+
+#modal-new-code span.sub:before {
+	content: '';
+	width: 4px;
+	height: 4px;
+	background-color: #85959e;
+	border-radius: 50%;
+	display: block !important;
+	top: 0;
+	position: absolute !important;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+#modal-integration.disabled .servico button {
+	background: #f2f2f3;
+	pointer-events: none;
+}
+
+#modal-integration form label {
+	color: #14252f !important;
+	font-weight: 400 !important;
+}
+
+#modal-integration form small {
+	font-size: 12px;
+	color: #85959e !important;
+	margin-top: -12px;
+	margin-bottom: 10px;
+}
+
+#modal-integration .footer span.info,
+#modal-manual .footer span.info {
+	color: #14252f;
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+#modal-integration button[type='submit'].new {
+	margin-left: auto;
+}
+
+#modal-integration h2,
+#modal-new-code h2,
+#modal-integration h2,
+#modal-manual h2 {
+	font-size: 16px;
+	font-weight: 700;
+	margin: 20px 0;
+}
+
+#modal-vincular form small {
+	font-size: 12px;
+	color: #85959e !important;
+	margin-top: -12px;
+	margin-bottom: 10px;
+}
+
+#modal-vincular .footer span.info {
+	color: #14252f;
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+#modal-vincular button[type='submit'] {
+	margin-left: auto;
+}
+
+#modal-code-success {
+	padding-right: 20px;
+}
+
+#modal-code-success .flex {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#modal-code-success .flex img {
+	padding: 0 5px;
+}
+
+#modal-code-success .flex h3 {
+	font-size: 20px;
+	font-weight: 700;
+	color: #62c75e;
+}
+
+#modal-code-success .flex p {
+	font-size: 14px;
+	color: #14252f;
+}
+
+#modal-code-success .flex .text button {
+	margin-left: auto;
+}
+
+#modal-code-delete {
+	padding-right: 20px;
+}
+
+#modal-code-delete .flex h3 {
+	font-size: 20px;
+	font-weight: 700;
+	color: #f05151;
+}
+
+#modal-code-delete .flex .box-alert div {
+	border: 1px solid;
+}
+
+#modal-code-delete .flex {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+#modal-code-delete .flex img {
+	padding: 0 5px;
+	margin-right: 20px;
+}
+
+#modal-code-delete .flex p {
+	font-size: 14px;
+	color: #14252f;
+	margin-top: 10px;
+}
+
+#modal-code-delete .flex .text button {
+	background-color: #f05151;
+	border: 1px solid;
+	white-space: nowrap;
+	width: auto;
+	margin: 0 5px 0 5px;
+	height: 47px;
+}
+
+#modal-code-delete .flex .text .botao-cancelar {
+	background-color: #ffffff;
+	color: #444f55;
+	border: 1px solid #cdd2d5;
+	padding: 0.5rem 1.3rem;
+	margin-right: 10px;
+}
+
+#modal-code-delete .footer {
+	justify-content: flex-end;
+	margin-top: 30px;
+}
+
+#modal-code-delete .alert {
+	display: flex;
+	align-items: flex-start;
+	background-color: #fef5ec;
+	font-size: 14px;
+	color: #14252f;
+	padding: 20px 30px;
+	border-radius: 8px;
+	margin-top: 20px;
+}
+
+#modal-code-delete .alert svg {
+	width: 18px;
+	height: 18px;
+}
+
+#modal-code-delete .alert span {
+	margin-left: 10px;
+}
+
+#modal-code-delete .alert span {
+	width: calc(100% - 18px);
+}
+
+#modal-code-delete .alert span strong {
+	font-weight: 400;
+	color: #009ef7;
+}

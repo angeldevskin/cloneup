@@ -1,0 +1,83 @@
+.title {
+	text-align: center;
+	font-size: 30px;
+	font-weight: 600;
+}
+
+.img {
+	width: 260px;
+}
+
+.img-acess-store img {
+	width: 100px;
+	height: 29px;
+	margin-right: 10px;
+}
+
+.container-autentica {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container-autentica h2 {
+	text-align: left;
+	margin-bottom: 20px;
+	color: #347eff;
+}
+
+.info-2fa {
+	width: 60%;
+	max-width: 400px;
+	margin: 0 20px;
+}
+
+.qr-code {
+	width: 180px;
+	align-self: flex-start;
+	margin-top: 60px;
+}
+
+.tutorial-2fa > p {
+	padding-bottom: 30px;
+}
+
+.qr-code img {
+	height: 180px;
+	width: auto;
+}
+
+[role='dialog'] {
+	max-width: 1160px;
+}
+
+.pin-code {
+	margin-top: 70px;
+}
+
+.pin-code p {
+	font-size: 14px;
+	color: #184f90;
+	padding-bottom: 5px;
+}
+
+.pin-code .input {
+	max-width: 130px;
+}
+
+.pin-code button {
+	border-radius: 8px !important;
+	background-color: #009ef7 !important;
+	margin-top: 50px;
+	padding: 0.5rem 30px;
+	font-size: 16px;
+}
+
+.pin-code .input > section > div {
+	border: 1px solid #8e8e8e !important;
+	border-radius: 4px !important;
+}
+
+.pin-code input::placeholder {
+	font-size: 12px !important;
+}

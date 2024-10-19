@@ -1,0 +1,64 @@
+#login-block .container {
+	display: flex;
+	flex-direction: column;
+}
+
+main > #login-block.aside-class {
+	width: 45% !important;
+}
+
+.form-login-tela {
+	width: calc(55% + 20px) !important;
+	border-radius: 35px;
+	z-index: 999;
+	position: relative;
+	overflow: hidden;
+	background: white;
+	padding-left: 40px !important;
+	left: -40px;
+	box-shadow: none;
+}
+
+.login-title {
+	font-family: 'Nunito Sans', sans-serif !important;
+	color: #ffffff !important;
+	font-size: 48px;
+	font-weight: 800;
+	padding: 24px 0 12px 0;
+}
+
+.login-text {
+	font-family: 'Nunito Sans', sans-serif !important;
+	color: #ffffff !important;
+	line-height: 1.2;
+	padding-left: 60px;
+}
+
+.login-text p {
+	font-family: 'Nunito Sans', sans-serif !important;
+	color: #ffffff !important;
+	margin-top: 30px;
+	line-height: 1.6;
+}
+
+.aside-class {
+	padding: 0 4px 0 0 !important;
+	background-image: url('../../assets/images/background-login.png');
+	background-size: cover;
+	background-position: center;
+	align-items: center !important;
+}
+
+.login-text {
+	max-width: 600px;
+}
+
+.additional-content {
+	position: fixed;
+	bottom: 40px;
+	left: 60px;
+}
+
+.logo-login img {
+	border-radius: 10px;
+}

@@ -1,0 +1,59 @@
+name: Build Develop
+
+on:
+  push:
+    branches:
+      - 'develop'
+
+jobs:
+  docker-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set .env
+        run: if [ "${GITHUB_REF#refs/heads/}" == "develop" ]; then (echo "${{ secrets.ENV_DEV }}" > .env); fi
+      - name: Set .env
+        run: cat .env
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
+
+      # see: https://github.com/aws-actions/amazon-ecr-login
+      - name: Log in to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - name: Docker build
+        run: docker build -t ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_DEFAULT_REGION }}.amazonaws.com/${{ secrets.PROJECT_NAME }}:${{ github.sha }} .
+      - name: Docker push
+        run: docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_DEFAULT_REGION }}.amazonaws.com/${{ secrets.PROJECT_NAME }}:${{ github.sha }}
+
+  deploy-develop:
+    needs: docker-push
+    runs-on: ubuntu-latest
+    container:
+      image: nikolaik/python-nodejs:python3.9-nodejs18
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    steps:
+      - name: Aws cli
+        run: curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+      - name: Unzip AWS CLI
+        run: unzip awscli-bundle.zip
+      - name: AWS CLI
+        run: ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+      - name: AWS Configure
+        run: aws configure set default.region ${{ secrets.AWS_DEFAULT_REGION }}
+      - name: Npm install cloudformation
+        run: npm install -g cfn-create-or-update
+      - name: Cloudformation validate
+        run: aws cloudformation validate-template --template-url https://upfunnels-cftemplates.s3.amazonaws.com/${{ secrets.PROJECT_NAME }}.yaml
+      - name: Cloudformation
+        run: cfn-create-or-update --stack-name dev-${{ secrets.PROJECT_NAME }} --region ${{ secrets.AWS_DEFAULT_REGION }} --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM --template-url https://upfunnels-cftemplates.s3.amazonaws.com/${{ secrets.PROJECT_NAME }}.yaml --parameters ParameterKey=imagemFinal,ParameterValue=031078334487.dkr.ecr.us-east-1.amazonaws.com/${{ secrets.PROJECT_NAME }}:${{ github.sha }} ParameterKey=nameContainer,ParameterValue=container-dev-${{ secrets.PROJECT_NAME }} ParameterKey=nameService,ParameterValue=service-dev-${{ secrets.PROJECT_NAME }} ParameterKey=nameApplication,ParameterValue=application-dev-${{ secrets.PROJECT_NAME }} ParameterKey=clusterARN,ParameterValue=arn:aws:ecs:us-east-1:031078334487:cluster/ecs-upfunnels-dev ParameterKey=clusterName,ParameterValue=ecs-upfunnels-dev ParameterKey=loadBalancerARN,ParameterValue=arn:aws:elasticloadbalancing:us-east-1:031078334487:listener/app/alb-upfunnels-dev/c92e6b1b83855e58/debfa37e2b4a3b92 ParameterKey=CONFIGHostEndpoint,ParameterValue=dev.upfunnels.com ParameterKey=CONFIGPriority,ParameterValue=2 ParameterKey=MemoryCustom,ParameterValue=2GB ParameterKey=CPUCustom,ParameterValue=1024 ParameterKey=VPCId,ParameterValue=vpc-0f90482b8a98c9b12 ParameterKey=AlarmNameIn,ParameterValue="Alarm +80% dev-${{ secrets.PROJECT_NAME }}" ParameterKey=AlarmNameOut,ParameterValue="Alarm -70% dev-${{ secrets.PROJECT_NAME }}" ParameterKey=SubnetA,ParameterValue=subnet-0461f5cc87cde9d3c ParameterKey=SubnetB,ParameterValue=subnet-0f896d32593ecbcac ParameterKey=SubnetC,ParameterValue=subnet-02fbdb33ce69e82f3

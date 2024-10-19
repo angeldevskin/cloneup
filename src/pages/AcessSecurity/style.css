@@ -1,0 +1,132 @@
+.title-form {
+	font-size: 20px;
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: 800;
+	color: #444f55;
+}
+
+.autenticacao-info {
+	padding: 30px 0 30px 0;
+}
+
+.container-two-factor {
+	width: 100%;
+}
+
+.form-container {
+	width: 55%;
+	padding: 30px 0 40px 0;
+}
+
+/* #formPerfil div{
+    border: 0px;
+} */
+
+/* #passwordReset div{
+    border: 0px;
+} */
+
+.redefinir {
+	-webkit-appearance: none;
+	border: none;
+	background: white;
+	color: #009ef7;
+	font-size: 16px;
+	text-align: right;
+	padding: 24px 0;
+	margin-left: auto;
+	cursor: pointer;
+	display: block;
+	margin-top: 16px;
+}
+
+p {
+	font-family: 'Nunito Sans', sans-serif;
+	color: #444f55;
+	padding-bottom: 20px;
+}
+
+h4 {
+	padding-bottom: 10px;
+}
+
+.underline {
+	color: #444f55 !important;
+	text-decoration: underline !important;
+}
+
+.container-info {
+	width: 55%;
+}
+
+.button-ativar {
+	padding: 0 0 20px 0;
+}
+
+.button-salvar {
+	margin-top: 20px;
+}
+
+.button-salvar button {
+	margin-left: auto;
+}
+
+.info-autentica {
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	color: #a53903;
+}
+
+.label-info-autentica {
+	padding-left: 8px;
+	font-weight: bold;
+}
+
+.info-autentica.sucesso span {
+	color: #039100;
+}
+
+.info-autentica.sucesso svg {
+	stroke: #039100;
+}
+
+.container-two-factor form > section > div {
+	border: none !important;
+	padding: 0 !important;
+}
+.container-two-factor input {
+	padding: 3px 10px;
+}
+
+/* .container-two-factor input {
+    border: 1px solid #D7D5DD !important;
+    border-radius: 10px !important;
+    padding: 11px 0.8rem !important;
+} */
+
+/* .disabled-input {
+    background-color: #f1f1f1 !important;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+} */
+
+.form-passwordReset {
+	margin-top: 20px;
+}
+
+#formPerfil > div:last-child {
+	padding: 0 !important;
+}
+
+#passwordReset > section > div {
+	border: none !important;
+	padding: 0 !important;
+}
+
+#passwordReset > section {
+	margin-bottom: 20px;
+}

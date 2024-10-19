@@ -1,0 +1,8 @@
+.w-color-sketch {
+	position: absolute !important;
+	z-index: 99999 !important;
+}
+
+.w-color-editable-input-rgba div:last-child {
+	display: none !important;
+}

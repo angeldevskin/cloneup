@@ -1,0 +1,21 @@
+.alert-config {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.icon-config {
+	padding-right: 5px;
+}
+.label-config {
+	color: #a53903;
+	font-family: 'Nunito sans', sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.icon-config svg {
+	stroke-width: 1px;
+	stroke: #a53903;
+	fill: none;
+}

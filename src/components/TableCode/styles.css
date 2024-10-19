@@ -1,0 +1,53 @@
+.field-line {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.row-field {
+	font-size: 14px;
+}
+
+.expanded {
+	width: 70%;
+}
+
+.separator {
+	margin: 0px 35px;
+	border: 1px solid #f2f2f3;
+}
+
+.whats-icon {
+	display: flex;
+	width: 36px;
+	height: 28px;
+	justify-content: space-around;
+	align-items: center;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.tag-status {
+	font-size: 14px;
+}
+
+.box-domain-status {
+	display: flex;
+	justify-content: space-between;
+}
+
+.title-status {
+	padding-right: 12px;
+}
+
+/*REMOVER APÓS O MVP CÓDIGOS ABAIXO*/
+.cell-table td {
+	font-size: 12.5px;
+}
+.details-button-leads {
+	visibility: hidden;
+}
+
+.lucide.lucide-library-square {
+	display: none;
+}

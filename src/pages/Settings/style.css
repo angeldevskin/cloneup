@@ -1,0 +1,49 @@
+form > div:last-child {
+	padding-top: 25px;
+}
+
+form {
+	font-family: 'Nunito Sans', sans-serif !important;
+}
+
+form > div > label {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+form > div > div > .disabled-input-product {
+	font-weight: 600;
+}
+
+.cancel-button {
+	font-weight: 800;
+}
+
+.disabled-input-product {
+	background-color: #f1f1f1 !important;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+#form-product div {
+	border: 0px;
+	padding-left: 0;
+}
+
+#form-product input {
+	border: 1px solid #d7d5dd !important;
+	border-radius: 10px !important;
+	padding: 11px 0.8rem !important;
+}
+
+.title-configuracoes {
+	font-size: 32px;
+	font-weight: 700;
+	margin-top: 12px;
+}
+
+.status {
+	padding-right: 30px;
+}
